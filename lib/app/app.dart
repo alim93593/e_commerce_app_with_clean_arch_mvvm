@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:flutter_clean_arch_mvvm/presentation/resources/routes_manager.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/resources/theme_manager.dart';
 
 
@@ -16,6 +17,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      onGenerateRoute: RouteGenerator.getRoute,
+      initialRoute: Routes.splashRoute,
       debugShowCheckedModeBanner: false,
       theme: getApplicationTheme(),
     );

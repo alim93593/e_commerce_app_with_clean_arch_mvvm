@@ -1,4 +1,4 @@
-class AppMargin{
+class AppMargin {
   static const double margin8 = 8.0;
   static const double margin12 = 12.0;
   static const double margin14 = 14.0;
@@ -6,7 +6,8 @@ class AppMargin{
   static const double margin18 = 18.0;
   static const double margin20 = 20.0;
 }
-class AppPadding{
+
+class AppPadding {
   static const double padding8 = 8.0;
   static const double padding12 = 12.0;
   static const double padding14 = 14.0;
@@ -14,7 +15,9 @@ class AppPadding{
   static const double padding18 = 18.0;
   static const double padding20 = 20.0;
 }
-class AppSize{
+
+class AppSize {
+  static const double size0 = 0;
   static const double size1_5 = 1.50;
   static const double size4 = 4.0;
   static const double size8 = 8.0;
@@ -23,4 +26,7 @@ class AppSize{
   static const double size16 = 16.0;
   static const double size18 = 18.0;
   static const double size20 = 20.0;
+  static const double size40 = 40.0;
+  static const double size60 = 60.0;
+  static const double size100 = 100.0;
 }

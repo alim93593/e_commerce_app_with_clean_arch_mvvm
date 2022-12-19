@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/forgot_password/forgot_password_view.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/login/login_view.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/main/main_view.dart';
+import 'package:flutter_clean_arch_mvvm/presentation/on_boarding/on_boarding_view.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/register/register_view.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/resources/strings_manager.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/splash/splash_view.dart';
@@ -9,6 +10,7 @@ import 'package:flutter_clean_arch_mvvm/presentation/store_details/store_details
 
 class Routes{
   static const String splashRoute ='/';
+  static const String onBoardingRoute ='/onBoarding';
   static const String loginRoute ='/login';
   static const String registerRoute ='/register';
   static const String forgetPasswordRoute ='/forgetPassword';
@@ -20,6 +22,8 @@ class RouteGenerator{
     switch(settings.name){
       case Routes.splashRoute:
         return MaterialPageRoute(builder:(_)=> const SplashView());
+      case Routes.onBoardingRoute:
+        return MaterialPageRoute(builder:(_)=> const OnBoardingView());
       case Routes.loginRoute:
         return MaterialPageRoute(builder:(_)=> const LoginView());
       case Routes.registerRoute:
