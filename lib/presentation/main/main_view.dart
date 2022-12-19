@@ -12,4 +12,9 @@ class _MainViewState extends State<MainView> {
   Widget build(BuildContext context) {
     return Container();
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 }

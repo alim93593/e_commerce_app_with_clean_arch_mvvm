@@ -2,48 +2,51 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/forgot_password/forgot_password_view.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/login/login_view.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/main/main_view.dart';
-import 'package:flutter_clean_arch_mvvm/presentation/on_boarding/on_boarding_view.dart';
+import 'package:flutter_clean_arch_mvvm/presentation/on_boarding/view/onboarding_view.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/register/register_view.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/resources/strings_manager.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/splash/splash_view.dart';
 import 'package:flutter_clean_arch_mvvm/presentation/store_details/store_details_view.dart';
 
-class Routes{
-  static const String splashRoute ='/';
-  static const String onBoardingRoute ='/onBoarding';
-  static const String loginRoute ='/login';
-  static const String registerRoute ='/register';
-  static const String forgetPasswordRoute ='/forgetPassword';
-  static const String mainRoute ='/main';
-  static const String storeDetailsRoute ='/storeDetails';
+class Routes {
+  static const String splashRoute = '/';
+  static const String onBoardingRoute = '/onBoarding';
+  static const String loginRoute = '/login';
+  static const String registerRoute = '/register';
+  static const String forgetPasswordRoute = '/forgetPassword';
+  static const String mainRoute = '/main';
+  static const String storeDetailsRoute = '/storeDetails';
 }
-class RouteGenerator{
-  static Route<dynamic>  getRoute(RouteSettings settings){
-    switch(settings.name){
+
+class RouteGenerator {
+  static Route<dynamic> getRoute(RouteSettings settings) {
+    switch (settings.name) {
       case Routes.splashRoute:
-        return MaterialPageRoute(builder:(_)=> const SplashView());
+        return MaterialPageRoute(builder: (_) => const SplashView());
       case Routes.onBoardingRoute:
-        return MaterialPageRoute(builder:(_)=> const OnBoardingView());
+        return MaterialPageRoute(builder: (_) => const OnBoardingView());
       case Routes.loginRoute:
-        return MaterialPageRoute(builder:(_)=> const LoginView());
+        return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.registerRoute:
-        return MaterialPageRoute(builder:(_)=> const RegisterView());
+        return MaterialPageRoute(builder: (_) => const RegisterView());
       case Routes.forgetPasswordRoute:
-        return MaterialPageRoute(builder:(_)=> const ForgotPasswordView());
+        return MaterialPageRoute(builder: (_) => const ForgotPasswordView());
       case Routes.mainRoute:
-        return MaterialPageRoute(builder:(_)=> const MainView());
+        return MaterialPageRoute(builder: (_) => const MainView());
       case Routes.storeDetailsRoute:
-        return MaterialPageRoute(builder:(_)=> const StoreDetailsView());
+        return MaterialPageRoute(builder: (_) => const StoreDetailsView());
       default:
         return unDefinedRoute();
     }
   }
- static  Route<dynamic> unDefinedRoute(){
-    return MaterialPageRoute(builder: (_)=> Scaffold(
-      appBar: AppBar(
-        title: const Text(AppStrings.noRoute),
-      ),
-      body:  const Center(child: Text(AppStrings.noRoute)),
-    ));
- }
+
+  static Route<dynamic> unDefinedRoute() {
+    return MaterialPageRoute(
+        builder: (_) => Scaffold(
+              appBar: AppBar(
+                title: const Text(AppStrings.noRoute),
+              ),
+              body: const Center(child: Text(AppStrings.noRoute)),
+            ));
+  }
 }
